@@ -1,6 +1,13 @@
 import Link from 'next/link'
 
-export default function ProjectCard({ project }: { project: any }) {
+type Project = {
+  title: string
+  description: string
+  tags: string[]
+  link: string
+}
+
+export default function ProjectCard({ project }: { project: Project }) {
   return (  
     <div className="border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
       <div className="p-6">
