@@ -1,8 +1,10 @@
 import type { NextConfig } from "next";
+
 const nextConfig: NextConfig = {
-    images: {
-    domains: ['images.unsplash.com'], // Add your image domains
+  images: {
+domains: ['images.unsplash.com', 'skillicons.dev'],
   },
+  
 };
 
 export default nextConfig;

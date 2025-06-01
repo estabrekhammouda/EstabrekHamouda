@@ -1,12 +1,17 @@
-import FL from '@/components/sections/FL'
-import Projects from '@/components/sections/Projects'
+import FemaleLead from '@/components/sections/FL';
+import AboutSection from '@/components/sections/About';
+import SkillsSection from '@/components/sections/Skills';
+import ProjectsSection from '@/components/sections/Projects';
+import ContactSection from '@/components/sections/Contact';
 
 export default function Home() {
   return (
-    <main className="container mx-auto px-4">
-      <h1>Helooooooooooooo from theother side</h1>
-      <FL />
-      <Projects />
-    </main>
-  )
+    <>
+      <FemaleLead />
+      <AboutSection />
+      <SkillsSection />
+      <ProjectsSection />
+      <ContactSection />
+    </>
+  );
 }

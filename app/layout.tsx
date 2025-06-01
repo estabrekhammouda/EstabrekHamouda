@@ -1,12 +1,13 @@
-import './globals.css'
-import type { Metadata } from 'next'
+import 'styles/globals.css'
 import { Inter } from 'next/font/google'
+import Navbar from '@/components/ui/Navbar'
+import Footer from '@/components/ui/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: 'Estabrek Hamouda',
-  description: 'Software Engineer Portfolio',
+export const metadata = {
+  title: 'Estabrek Hammouda | Portfolio',
+  description: 'Software Engineering Student & Front-End Developer',
 }
 
 export default function RootLayout({
@@ -15,9 +16,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${inter.className} bg-gray-50 dark:bg-gray-900`}>
-        {children}
+    <html lang="en">
+      <body className={`${inter.className} bg-gray-50`}>
+        <Navbar />
+        <main className="min-h-screen pt-20">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   )
