@@ -1,15 +1,32 @@
 "use client";
 import { useState } from 'react';
-import { skills, skills1,experience } from '@/lib/constants';
+import { skills, experience } from '@/lib/constants';
 
 export default function Skills() {
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
 
-  // Create a mapping of skill names to their icons
-  const skillIconMap = skills1.reduce((map, skill) => {
-    map[skill.name] = skill.url;
-    return map;
-  }, {} as Record<string, string>);
+  const deviconMap: Record<string, string> = {
+    'Python': 'devicon-python-plain colored',
+    'Java': 'devicon-java-plain colored',
+    'C++': 'devicon-cplusplus-plain colored',
+    'C': 'devicon-c-plain colored',
+    'JavaScript': 'devicon-javascript-plain colored',
+    'PHP': 'devicon-php-plain colored',
+    'HTML': 'devicon-html5-plain colored',
+    'CSS': 'devicon-css3-plain colored',
+    'React': 'devicon-react-original colored',
+    'React Native': 'devicon-react-original colored',
+    'Next.js': 'devicon-nextjs-plain colored',
+    'Tailwind': 'devicon-tailwindcss-plain colored',
+    'Node.js': 'devicon-nodejs-plain colored',
+    'Spring': 'devicon-spring-plain colored',
+    'MongoDB': 'devicon-mongodb-plain colored',
+    'MySQL': 'devicon-mysql-plain colored',
+    'Git': 'devicon-git-plain colored',
+    'GitHub': 'devicon-github-original colored',
+    'Bootstrap': 'devicon-bootstrap-plain colored',
+    'Figma': 'devicon-figma-plain colored'
+  };
 
   return (
     <section className="py-16 px-4 max-w-6xl mx-auto" id="skills">
@@ -17,48 +34,37 @@ export default function Skills() {
       <div className="grid md:grid-cols-2 gap-12">
         {/* Skills Section */}
         <div className="space-y-8">
-          {Object.entries(skills).map(([category, skillNames]) => (
-            <div key={category}>
-              <h2 className="text-xl font-semibold mb-3">{category}</h2>
-              <ul className="flex flex-wrap gap-3">
-                {skillNames.map((skillName) => {
-                  const iconUrl = skillIconMap[skillName];
-                  return (
-                    <li
-                      key={skillName}
-                      className="relative"
-                      onMouseEnter={() => setHoveredSkill(skillName)}
-                      onMouseLeave={() => setHoveredSkill(null)}
-                    >
-                      {/* Skill Name */}
-                      <span className="bg-gray-100 dark:bg-gray-800 px-3 py-1.5 rounded-full text-sm font-medium inline-block">
-                        {skillName}
-                      </span>
-
-                      {/* Skill Icon on Hover */}
-                      {hoveredSkill === skillName && iconUrl && (
-                        <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 z-10">
-                          <div className="bg-white dark:bg-gray-700 p-1.5 rounded-full shadow-lg border border-gray-200 dark:border-gray-600">
-                            <img
-                              src={iconUrl}
-                              alt={skillName}
-                              width={32}
-                              height={32}
-                              className="w-8 h-8 object-contain"
-                              loading="lazy"
-                            />
-                          </div>
+          {skills.map((group, idx) => (
+            <ul key={idx} className="flex flex-wrap gap-3">
+              {group.map((skillName) => {
+                const iconClass = deviconMap[skillName];
+                return (
+                  <li
+                    key={skillName}
+                    className="relative group"
+                    onMouseEnter={() => setHoveredSkill(skillName)}
+                    onMouseLeave={() => setHoveredSkill(null)}
+                  >
+                    <span className="bg-gray-100 dark:bg-gray-800 px-3 py-1.5 rounded-full text-sm font-medium inline-block transition-all duration-200 group-hover:bg-gray-200 dark:group-hover:bg-gray-700">
+                      {skillName}
+                    </span>
+                    {iconClass && (
+                      <div className={`absolute -top-12 left-1/2 transform -translate-x-1/2 z-10 transition-all duration-300 ease-in-out ${hoveredSkill === skillName ? 'opacity-100 scale-100' : 'opacity-0 scale-50 pointer-events-none'}`}>
+                        <div className="bg-white dark:bg-gray-700 p-2 rounded-full shadow-lg border border-gray-200 dark:border-gray-600 flex items-center justify-center">
+                          <i className={`${iconClass} text-3xl`}></i>
                         </div>
-                      )}
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
+                        <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-3 h-3 bg-white dark:bg-gray-700 border-r border-b border-gray-200 dark:border-gray-600 rotate-45"></div>
+                      </div>
+                    )}
+                  </li>
+                );
+              })}
+            </ul>
           ))}
         </div>
 
-         <div>
+        {/* Experience Section */}
+        <div>
           {experience.map((exp) => (
             <div key={exp.year} className="mb-6">
               <p className="text-lg font-semibold mb-2">{exp.year}</p>
@@ -75,5 +81,3 @@ export default function Skills() {
     </section>
   );
 }
-
-

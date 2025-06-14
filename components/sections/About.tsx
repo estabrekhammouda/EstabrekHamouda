@@ -15,8 +15,7 @@ export default function About() {
           <img
             src="public/images/profil.jpg"
             alt="Profile"
-            className="w-48 h-48 rounded-full object-cover shadow-lg border border-gray-400 dark:border-gray-700"
-          />
+            className="w-48 h-48 rounded-full object-cover shadow-lg border border-gray-400 dark:border-gray-700"/>
         </div>
       </div>
       <h1 className="text-4xl font-bold mb-12">About Me</h1>
@@ -33,8 +32,7 @@ export default function About() {
           </p>
           <div className="space-y-2">
             <p><strong>Email:</strong> istabrek.hamouda200@gmail.com</p>
-            <p><strong>Phone:</strong> +216 29 565 128</p>
-            <p><strong>Location:</strong> Mahdia, Tunisia</p>
+            <p><strong>Location:</strong>Tunisia</p>
           </div>
         </div>
         <div className="flex justify-center">

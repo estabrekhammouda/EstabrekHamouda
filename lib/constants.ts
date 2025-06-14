@@ -1,29 +1,11 @@
-export const skills = {
-    "Programming Languages": ["Python", "Java", "C++", "C", "JavaScript", "PHP"],
-    "Frontend": ["HTML5", "CSS3", "JavaScript", "React.js", "React Native"],
-    "Backend": ["Node.js", "Spring Boot", "PHP"],
-    "Database": ["MongoDB", "MySQL"],
-    "Tools & Frameworks": ["Git", "GitHub", "Bootstrap", "Tailwind CSS", "JWT"]
-  };
-export const skills1 = [
-  { name: "Python", icon: "python", url: "https://skillicons.dev/icons?i=python" },
-  { name: "Java", icon: "java", url: "https://skillicons.dev/icons?i=java" },
-  { name: "C++", icon: "c++", url: "https://skillicons.dev/icons?i=c++" },
-  { name: "C", icon: "c", url: "https://skillicons.dev/icons?i=c" },
-  { name: "React", icon: "react", url: "https://skillicons.dev/icons?i=react" },
-  { name: "Next.js", icon: "nextjs", url: "https://skillicons.dev/icons?i=nextjs" },
-  { name: "JavaScript", icon: "js", url: "https://skillicons.dev/icons?i=js" },
-  { name: "TypeScript", icon: "ts", url: "https://skillicons.dev/icons?i=ts" },
-  { name: "Tailwind", icon: "tailwind", url: "https://skillicons.dev/icons?i=tailwind" },
-  { name: "Node.js", icon: "nodejs", url: "https://skillicons.dev/icons?i=nodejs" },
-  { name: "Git", icon: "git", url: "https://skillicons.dev/icons?i=git" },
-  { name: "Linux", icon: "linux", url: "https://skillicons.dev/icons?i=linux" },
-  { name: "MongoDB", icon: "mongodb", url: "https://skillicons.dev/icons?i=mongodb" },
-  { name: "PostgreSQL", icon: "postgresql", url: "https://skillicons.dev/icons?i=postgresql" },
-  { name: "HTML", icon: "html", url: "https://skillicons.dev/icons?i=html" },
-  { name: "CSS", icon: "css", url: "https://skillicons.dev/icons?i=css" },
-  { name: "Spring", icon: "spring", url: "https://skillicons.dev/icons?i=spring" }
+export const skills = [
+  ["Python", "Java", "C++", "C", "JavaScript", "PHP"],
+  ["HTML", "CSS", "JavaScript", "React", "React Native", "Next.js", "Tailwind"],
+  ["Node.js", "Spring", "PHP", "MongoDB", "MySQL"],
+  ["Git", "GitHub", "Bootstrap", "Figma"]
 ];
+
+
 export const projects = [
     {
       title: "MindWell",
