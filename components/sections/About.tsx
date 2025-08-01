@@ -12,10 +12,6 @@ export default function About() {
           </p>
         </div>
         <div className="flex justify-center md:justify-end">
-          <img
-            src="public/images/profil.jpg"
-            alt="Profile"
-            className="w-48 h-48 rounded-full object-cover shadow-lg border border-gray-400 dark:border-gray-700"/>
         </div>
       </div>
       <h1 className="text-4xl font-bold mb-12">About Me</h1>

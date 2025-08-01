@@ -29,7 +29,7 @@ const ContactSection = () => (
   <section id="contact" className="py-20 px-4 bg-black/20">
     <div className="max-w-4xl mx-auto text-center">
       <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r from-purple-900 to-pink-400 bg-clip-text text-transparent">
-        Lets Connect
+       🚀 Launch a conversation with me
       </h2>
       <p className="text-xl text-gray-300 mb-12">
         Im always interested in new opportunities and collaborations. Lets build something amazing together!
@@ -61,7 +61,7 @@ const ContactSection = () => (
       <div className="bg-white/5 backdrop-blur-sm rounded-lg p-8 border border-white/10">
         <h3 className="text-2xl font-semibold mb-6 text-purple-400">Ready to collaborate?</h3>
         <p className="text-gray-300 mb-6">
-          Whether you have a project in mind, need a developer for your team, or just want to chat about technology, Id love to hear from you.
+          Whether you have a project in mind, need a developer for your team, or just want to chat about technology, I would love to hear from you.
         </p>
         <a 
           href="mailto:istabrek.hamouda200@gmail.com"
