@@ -1,10 +1,31 @@
 export const skills = [
-  ["Python", "Java", "C++", "C", "JavaScript", "PHP"],
+  ["Python", "Java", "C++", "C"],
   ["HTML", "CSS", "JavaScript", "React", "React Native", "Next.js", "Tailwind"],
   ["Node.js", "Spring", "PHP", "MongoDB", "MySQL"],
   ["Git", "GitHub", "Bootstrap", "Figma"]
 ];
-
+export const deviconMap: Record<string, string> = {
+    'Python': 'devicon-python-plain colored',
+    'Java': 'devicon-java-plain colored',
+    'C++': 'devicon-cplusplus-plain colored',
+    'C': 'devicon-c-plain colored',
+    'HTML': 'devicon-html5-plain colored',
+    'CSS': 'devicon-css3-plain colored',
+    'JavaScript': 'devicon-javascript-plain colored',
+    'React': 'devicon-react-original colored',
+    'React Native': 'devicon-react-original colored',
+    'Next.js': 'devicon-nextjs-plain colored',
+    'Tailwind': 'devicon-tailwindcss-plain colored',
+    'Node.js': 'devicon-nodejs-plain colored',
+    'Spring': 'devicon-spring-plain colored',
+    'PHP': 'devicon-php-plain colored',
+    'MongoDB': 'devicon-mongodb-plain colored',
+    'MySQL': 'devicon-mysql-plain colored',
+    'Git': 'devicon-git-plain colored',
+    'GitHub': 'devicon-github-original colored',
+    'Bootstrap': 'devicon-bootstrap-plain colored',
+    'Figma': 'devicon-figma-plain colored'
+  };
 
 export const projects = [
     {
@@ -55,11 +76,14 @@ export  const experience = [
   {
     year: "2024",
     items: [
-      { title: "Freelancer", company: "UpWork" },
-      { title: "Bachelor's degree in Computer Science", company: "University of Monastir" }
-    ]
-  }
-]
+      { title: "Freelancer", company: "UpWork" },    ]
+  },
+  {
+    year: "2025",
+    items: [
+      { title: "internership", company: "EliteRobotique" },
+    ]}
+];
   export const navItems = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },

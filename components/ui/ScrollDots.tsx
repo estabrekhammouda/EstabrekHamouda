@@ -1,15 +1,16 @@
+import { navItems} from '@/lib/constants';
+
 const ScrollDots = () => {
-  const sections = ['about', 'skills', 'work', 'testimonial', 'contact'];
 
   return (
     <div className="fixed right-6 top-1/3 flex flex-col gap-4 z-50">
-      {sections.map((section, index) => (
+      {navItems.map((navItem, index) => (
         <a
           key={index}
-          href={`#${section}`}
+          href={`#${navItem}`}
           className="w-3 h-3 rounded-full bg-gray-400 hover:bg-blue-500 transition-all"
         >
-          <span className="sr-only">{section}</span>
+          <span className="sr-only">{navItem.label}</span>
         </a>
       ))}
     </div>
